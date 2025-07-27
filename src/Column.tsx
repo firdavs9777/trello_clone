@@ -1,5 +1,6 @@
 import React from "react";
 import { ColumnContainer, ColumnTitle } from "./styles";
+import { AddNewItem } from "./AddNewItem";
 interface ColumnProps {
   text?: string;
 }
@@ -11,6 +12,7 @@ export const Column = ({
     <ColumnContainer>
       <ColumnTitle>{text}</ColumnTitle>
       <div>{children}</div>
+      <AddNewItem toggleButtonText="+ Add another list" onAdd={console.log} />
     </ColumnContainer>
   );
 };
